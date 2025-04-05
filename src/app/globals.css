@@ -112,11 +112,54 @@
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+.bg-slideshow-container {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.bg-slideshow-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bg-slideshow-image.active {
+  opacity: 1;
+}
+
+.bg-slideshow-glow {
+  position: absolute;
+  inset: -30px;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px) brightness(1.8);
+  opacity: 0;
+  animation: 
+    pulseGlow 1.5s ease-in-out infinite alternate,
+    floatEffect 15s linear infinite;
+  z-index: -1;
+  transform-origin: center;
+}
+
+
+.bg-slideshow-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0.4) 0%, 
+    rgba(0,0,0,0.2) 50%, 
+    rgba(0,0,0,0.4) 100%);
+}
+
+.dark .bg-slideshow-overlay {
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0.6) 0%, 
+    rgba(0,0,0,0.3) 50%, 
+    rgba(0,0,0,0.6) 100%);
 }
