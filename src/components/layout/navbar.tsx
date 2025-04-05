@@ -20,7 +20,10 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <ModeToggle />
             <Link href="/login" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
-              Login
+              Entrar
+            </Link>
+            <Link href="/register" className="bg-white hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-md">
+              Cadastre-se
             </Link>
           </div>
         </div>

@@ -10,10 +10,10 @@ export function HeroSection() {
         Junte seus Pokémon favoritos e domine as batalhas!
       </p>
       <div className="flex gap-4">
-        <Link href="/team-builder" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">
+        <Link href="/login" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">
           Começar Agora
         </Link>
-        <Link href="/explore" className="px-6 py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white rounded-lg font-medium">
+        <Link href="#" className="px-6 py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white rounded-lg font-medium">
           Explorar Times
         </Link>
       </div>

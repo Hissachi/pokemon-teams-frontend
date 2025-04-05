@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { ModeToggle } from "./mode-toggle"
 
-export function LoginForm({
+export function RegisterForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
@@ -61,7 +61,7 @@ export function LoginForm({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Entrar com Apple</span>
+                  <span className="sr-only">Login com Apple</span>
                 </Button>
                 <Button variant="outline" type="button" className="w-full">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export function LoginForm({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Entrar com Google</span>
+                  <span className="sr-only">Login com Google</span>
                 </Button>
                 <Button variant="outline" type="button" className="w-full">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -79,13 +79,13 @@ export function LoginForm({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Login with Meta</span>
+                  <span className="sr-only">Login com Meta</span>
                 </Button>
               </div>
               <div className="text-center text-sm">
-                Não possui uma conta ainda?{" "}
-                <a href="/register" className="underline underline-offset-4">
-                  Cadastre-se
+                Já possui uma conta?{" "}
+                <a href="/login" className="underline underline-offset-4">
+                  Entrar
                 </a>
               </div>
             </div>
@@ -101,7 +101,7 @@ export function LoginForm({
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
         Ao prosseguir, você concorda com os nossos <a href="#">Termos de serviço</a>{" "}
-        e <a href="/register">Política de Privacidade</a>.
+        e <a href="#">Política de Privacidade</a>.
       </div>
     </div>
   )
