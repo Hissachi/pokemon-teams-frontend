@@ -8,8 +8,14 @@ export function Navbar() {
     <nav className="bg-white/85 dark:bg-gray-800/90 shadow-sm fixed w-full top-0 z-10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16 items-center">
-          <Link href="/" className="text-xl font-bold text-gray-800 dark:text-white">
-            Poké-Teams
+          <Link href="/">
+            <img
+              src="/Poketeams-logo.svg"
+              alt="PokéTeams Logo"
+              width={150}
+              height={40}
+              className="h-10 w-auto"
+            />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

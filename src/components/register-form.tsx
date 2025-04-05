@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { ModeToggle } from "./mode-toggle"
+import Link from "next/link"
 
 export function RegisterForm({
   className,
@@ -11,7 +12,19 @@ export function RegisterForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <div>
+      <div  className="flex justify-between items-center">
+        <Link href="/" className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md">
+          Home
+        </Link>
+          <Link href="/">
+            <img
+              src="/Poketeams-logo.svg"
+              alt="PokéTeams Logo"
+              width={75}
+              height={20}
+              className="h-10 w-auto"              
+            />
+          </Link>
         <ModeToggle />
       </div>
       <Card className="overflow-hidden p-0">
@@ -25,6 +38,11 @@ export function RegisterForm({
                 </p>
               </div>
               <div className="grid gap-3">
+                <Label htmlFor="name">Nome</Label>
+                <Input id="name" type="text" placeholder="Seu nome" required />
+              </div>
+
+              <div className="grid gap-3">
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
@@ -36,12 +54,12 @@ export function RegisterForm({
               <div className="grid gap-3">
                 <div className="flex items-center">
                   <Label htmlFor="password">Senha</Label>
-                  <a
-                    href="#"
-                    className="ml-auto text-sm underline-offset-2 hover:underline"
-                  >
-                    Esqueceu sua senha?
-                  </a>
+                </div>
+                <Input id="password" type="password" required />
+              </div>
+              <div className="grid gap-3">
+                <div className="flex items-center">
+                  <Label htmlFor="password">Digite novamente a Senha</Label>
                 </div>
                 <Input id="password" type="password" required />
               </div>

@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { ModeToggle } from "./mode-toggle"
+import Link from "next/link"
 
 export function LoginForm({
   className,
@@ -11,7 +12,19 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <div>
+      <div  className="flex justify-between items-center">
+        <Link href="/" className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md">
+            Home
+        </Link>
+          <Link href="/">
+            <img
+              src="/Poketeams-logo.svg"
+              alt="PokéTeams Logo"
+              width={75}
+              height={20}
+              className="h-10 w-auto"              
+            />
+          </Link>
         <ModeToggle />
       </div>
       <Card className="overflow-hidden p-0">
@@ -19,9 +32,9 @@ export function LoginForm({
           <form className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-3x1 font-bold">Bem-Vindo(a) ao Poké-Teams</h1>
+                <h1 className="text-3x1 font-bold">Bem-Vindo(a) novamente ao Poké-Teams</h1>
                 <p className="text-muted-foreground text-balance">
-                  Pronto para ser um treinador pokémon?
+                  Seja um mestre pokémon!
                 </p>
               </div>
               <div className="grid gap-3">
@@ -50,7 +63,7 @@ export function LoginForm({
               </Button>
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                 <span className="bg-card text-muted-foreground relative z-10 px-2">
-                  Ou entre com:
+                  Ou cadastre-se com:
                 </span>
               </div>
               <div className="grid grid-cols-3 gap-4">
