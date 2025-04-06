@@ -61,7 +61,7 @@ const data = {
         },
         {
           title: "Criar novo time",
-          url: "#",
+          url: "/teams/new",
         },
         {
           title: "Excluir time",
@@ -71,7 +71,7 @@ const data = {
     },
     {
       title: "Pokédex",
-      url: "#",
+      url: "/pokedex",
       icon: Bot,
       items: [
         {
@@ -80,7 +80,7 @@ const data = {
         },
         {
           title: "Todos os pokémons",
-          url: "#",
+          url: "/pokedex",
         },
       ],
     },
